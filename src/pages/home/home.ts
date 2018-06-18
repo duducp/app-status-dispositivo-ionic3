@@ -7,6 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  statusBattery: number = 20;
+
   constructor(public navCtrl: NavController) {
 
   }

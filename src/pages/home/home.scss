@@ -1,3 +1,33 @@
 page-home {
+  .card {
+    width: 100%;
+  }
 
+  .card-header {
+    color: #fff;
+    padding: 5px;
+  }
+
+  .card-content {
+    p {
+      color: #fff;
+    }
+
+    .percent {
+      font-size: 5rem;
+      font-weight: bold;
+    }
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  .green {
+    background-color: green;
+  }
+
+  .orange {
+    background-color: orange;
+  }
 }
