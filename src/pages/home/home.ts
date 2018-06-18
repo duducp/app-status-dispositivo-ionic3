@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { BatteryStatus } from '@ionic-native/battery-status';
 import { LoadingController } from 'ionic-angular';
+import { Device } from '@ionic-native/device';
 
 @Component({
   selector: 'page-home',
@@ -9,6 +10,7 @@ import { LoadingController } from 'ionic-angular';
 })
 export class HomePage {
 
+  dataDevice: any;
   statusBattery: number = 20;
   isPlugged: Boolean;
   subscription: any;
@@ -16,6 +18,7 @@ export class HomePage {
   constructor(
     public navCtrl: NavController,
     private batteryStatus: BatteryStatus,
+    private device: Device,
     public loadingCtrl: LoadingController
   ) {
   }
@@ -29,8 +32,11 @@ export class HomePage {
     this.subscription = await this.batteryStatus.onChange().subscribe(status => {
       this.statusBattery = status.level;
       this.isPlugged = status.isPlugged;
+
       console.log(status);
     });
+
+    this.dataDevice = this.device;
 
     loader.dismiss();
   }
@@ -39,4 +45,7 @@ export class HomePage {
     this.subscription.unsubscribe();
   }
 
+  verifyBattery() {
+
+  }
 }
