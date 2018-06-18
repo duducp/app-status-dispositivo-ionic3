@@ -3,31 +3,33 @@ page-home {
     width: 100%;
   }
 
-  .card-header {
-    color: #fff;
-    padding: 5px;
-  }
-
-  .card-content {
-    p {
+  .battery {
+    .card-header {
       color: #fff;
+      padding: 5px;
     }
 
-    .percent {
-      font-size: 5rem;
-      font-weight: bold;
+    .card-content {
+      p {
+        color: #fff;
+      }
+
+      .percent {
+        font-size: 5rem;
+        font-weight: bold;
+      }
     }
-  }
 
-  .red {
-    background-color: red;
-  }
+    .red {
+      background-color: red;
+    }
 
-  .green {
-    background-color: green;
-  }
+    .green {
+      background-color: green;
+    }
 
-  .orange {
-    background-color: orange;
+    .orange {
+      background-color: orange;
+    }
   }
 }

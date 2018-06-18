@@ -8,6 +8,7 @@
 
 <ion-content padding text-center>
   <ion-card no-margin
+  class="battery"
   [class.red]="statusBattery < 15"
   [class.orange]="statusBattery <= 30 && statusBattery >= 15"
   [class.green]="statusBattery > 30"
@@ -17,9 +18,10 @@
     </ion-card-header>
   
     <ion-card-content no-padding>
-      <p class="percent">80%</p>
+      <p class="percent">{{ statusBattery }}%</p>
 
-      <p>Bateria fora da carga</p>
+      <p *ngIf="!isPlugged">Bateria fora da carga</p>
+      <p *ngIf="isPlugged">Bateria sendo carregada</p>
     </ion-card-content>
   </ion-card>
 </ion-content>
